@@ -237,7 +237,7 @@ p:last-child {
 }
 .optional-btn:hover::before,
 .optional-btn:focus::before {
-    border-color: #ff612f;
+    border-color: #fe0000;
 }
 .optional-btn:hover span,
 .optional-btn:focus span {
@@ -247,7 +247,7 @@ p:last-child {
 .preloader-area {
     position: fixed;
     top: 0;
-    background-color: #ff612f;
+    background-color: #fe0000;
     left: 0;
     width: 100%;
     height: 100%;

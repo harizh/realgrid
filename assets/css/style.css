@@ -93,7 +93,7 @@ p:last-child {
 }
 .section-title {
     text-align: center;
-    max-width: 575px;
+    max-width: 75%;
     text-transform: capitalize;
     margin-left: auto;
     margin-bottom: 60px;
@@ -484,7 +484,7 @@ p:last-child {
     margin-bottom: 0;
 }
 .strax-nav .navbar .navbar-nav {
-    margin-left: 3rem;
+    margin-left: 5rem;
 }
 .strax-nav .navbar .navbar-nav .nav-item {
     position: relative;
@@ -6695,4 +6695,36 @@ blockquote::after,
 }
 .footer-logo img{
     height: 2rem;
+}
+.workflow .features-box-one:hover{
+    box-shadow: none !important;
+}
+.workflow .features-box-one h3{
+    font-size: 1.1rem !important;
+}
+.workflow .features-box-one p{
+    padding: 0 15%;
+}
+.workflow .features-box-one i{
+    background-color: transparent;
+    color: #fe0000;
+    transition: 0.3s ease-in-out;
+    font-size: 60px;
+}
+.workflow .features-box-one:hover i{
+    background-color: #fe0000;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-size: 30px;
+}
+.sub-title.section-title h2 span{
+        font-size: 1.1rem;
+    font-weight: 400;
+    color: #fe0000;
+}
+.workflow .features-box-one{
+    cursor: pointer;
+}
+.video-box.industries{
+    max-width: 100%;
 }

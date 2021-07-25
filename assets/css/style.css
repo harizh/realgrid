@@ -4440,7 +4440,7 @@ blockquote::after,
     z-index: -1;
     -webkit-animation: animatedBackground 15s linear infinite;
     animation: animatedBackground 15s linear infinite;
-    background-image: url(../img/bg_lines.svg);
+    background-image: url(../img/shape/shape-62.png);
     background-repeat: repeat;
     background-position: center center;
     background-size: cover;
@@ -6737,4 +6737,8 @@ blockquote::after,
 }
 .whyChooseUs{
     padding: 3rem 0;
+}
+.located h4{
+    font-size: 1rem;
+    padding-top: 2rem;
 }

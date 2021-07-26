@@ -6434,7 +6434,7 @@ blockquote::after,
 .single-services-box {
     margin-bottom: 30px;
     overflow: hidden;
-    background-color: #f9f9f9;
+    background-color: #f2f2f2;
 }
 .single-services-box .content {
     padding: 30px 0 30px 25px;
@@ -6741,4 +6741,61 @@ blockquote::after,
 .located h4{
     font-size: 1rem;
     padding-top: 2rem;
+}
+.webHead h2{
+    padding-left: 3rem;
+    position: relative;
+}
+.webHead h2 span{
+    color: #fe0000;
+}
+.webHead h2::before{
+    content: '';
+    background-image: url(../img/icon1.png);
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.2;
+    left: 15px;
+    top: 0px;
+    z-index: 9;
+    color: rgb(254 8 8 / 5%);
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.service-details-content{
+    padding-top: 3rem;
+}
+.section-title.customText h2{
+    font-size: 32px;
+}
+.themeService .single-services-box p{
+    min-height: 10rem;
+}
+.themeService .single-services-box{
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.themeService .single-services-box:hover{
+    transform: translateY(-20px);
+    transition: 0.5s ease-in-out;
+    background-color: #080a3c;
+}
+.themeService .single-services-box:hover p{
+    color: #fff;
+}
+.themeService .single-services-box:hover a{
+    color: #fe0000;
+}
+.features-box .icon{
+    font-weight: 700;
+}
+.features-box{
+    cursor: pointer;
+}
+.cont01{
+    padding-left: 1.5%;
+    padding-bottom: 1rem;
 }

@@ -935,7 +935,7 @@ p:last-child {
     .strax-responsive-nav .strax-responsive-menu.mean-container .navbar-nav {
         overflow-y: scroll;
         overflow-x: hidden;
-        height: 294px;
+        height: auto;
         -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
         box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
     }

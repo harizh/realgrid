@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <title>RealGrid Solutions</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -128,7 +129,24 @@
 
     <section class="contact-area ptb-100">
         <div class="container">
-            <div class="contact-inner">
+            <div class="contact-inner"> 
+                <div class="something">
+                    <!-- your form here -->
+                </div>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="pleaseWait" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">                            
+                            <div class="modal-body">
+                                <img src="https://thrivingmarriages-eszuskq0bptlfh8awbb.stackpathdns.com/wp-content/uploads/2017/03/gif-icons-menu-transition-animations-shake-new-mail.gif">
+
+                                <p class="text-center">Please wait while we are processing your request<br>Our team will contact you soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="contact-features-list">
@@ -157,7 +175,22 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="contact-form">
                             <h3>Let's Talks</h3>
-                            <form id="contactForm" novalidate="true">
+                            <!-- <form id="submit-form" action="">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="name" placeholder="Your name..">
+                                <label for="lname">Email</label>
+                                <input type="text" id="lname" name="email" placeholder="Your last name..">
+                                <label for="country">Country</label>
+                                <select id="country" name="color">
+                                    <option value="australia">Australia</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="usa">USA</option>
+                                </select>
+                                <label for="subject">Subject</label>
+                                <textarea id="subject" name="message" placeholder="Write something.." style="height:170px"></textarea>
+                                <input type="submit" value="Submit">
+                            </form> -->
+                            <form id="submit-form" action="" display="none">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
@@ -175,7 +208,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required=""
+                                            <input type="text" name="contact" id="contact" required=""
                                                 data-error="Please enter your number" class="form-control"
                                                 placeholder="Your Phone">
                                             <div class="help-block with-errors"></div>
@@ -183,9 +216,12 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control"
-                                                required="" data-error="Please enter your Country"
-                                                placeholder="Your Country">
+                                            <select class="form-control" id="country" name="country">
+                                                <option value="india">India</option>
+                                                <option value="usa">USA</option>
+                                                <option value="uk">UK</option>
+                                                <option value="uae">UAE</option>
+                                            </select>
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -325,6 +361,28 @@
     <script src="assets/js/coustom-particles.js"></script>
 
     <script src="assets/js/main.js"></script>
+
+    <script>
+        
+        $("#submit-form").submit((e) => {
+            $('#pleaseWait').modal('show');
+            e.preventDefault()
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbwcuTqavCRB2Qn3eC4C5p8xbGRRtYWeD69z3V0eaMf7E7i1CmDgTkNYDeXUbKPvGpNSMA/exec",
+                data: $("#submit-form").serialize(),
+                method: "post",
+                success: function (response) {                   
+                    window.location.reload()
+                    // window.location.href="success.html"                   
+                    
+                },
+                error: function (err) {
+                    alert("Something Error")
+                }
+            })
+        })
+    </script>
+    
 </body>
 
 </html>

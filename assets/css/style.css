@@ -2336,14 +2336,15 @@ p:last-child {
 .features-box .back-icon {
     position: absolute;
     right: 10px;
-    top: -52px;
+    top: -40px;
     z-index: -1;
     color: #fe0000;
     opacity: 0.06;
-    font-size: 190px;
+    font-size: 120px;
     line-height: 190px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    font-weight: 700;
 }
 .features-box:hover {
     background-color: #fff;
@@ -6816,4 +6817,13 @@ ul.chooseUs li:before {
   color: red;
   left: -20px;
 
+}
+#pleaseWait .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
